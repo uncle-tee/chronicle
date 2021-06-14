@@ -4,6 +4,7 @@
   "description": "<tagline>",
   "main": "lib/index.js",
   "scripts": {
+    "start:showcase": "nodemon showcase/index.ts",
     "test": "jest --config jestconfig.json --passWithNoTests",
     "build": "tsc",
     "lint": "tsc --noEmit && eslint src/**/*.ts",
@@ -31,17 +32,36 @@
   },
   "homepage": "https://github.com/<username>/<project>#readme",
   "devDependencies": {
+    "@nestjs/common": "^6.11.8",
+    "@nestjs/core": "^6.11.8",
+    "@types/cls-hooked": "^4.3.3",
+    "@types/express": "^4.17.12",
     "@types/jest": "^25.1.0",
+    "@types/node": "^15.12.2",
+    "@types/uuid": "^8.3.0",
     "@typescript-eslint/eslint-plugin": "^2.16.0",
     "@typescript-eslint/parser": "^2.16.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.9.0",
     "eslint-plugin-prettier": "^3.1.2",
+    "express": "^4.17.1",
     "husky": "^4.0.10",
     "jest": "^25.1.0",
     "lint-staged": "^10.0.9",
+    "nodemon": "^2.0.7",
     "prettier": "^2.0.2",
     "ts-jest": "^25.1.0",
-    "typescript": "^3.7.5"
+    "typescript": "^3.7.5",
+    "@types/supertest": "^2.0.11",
+    "supertest": "^6.1.3",
+    "ts-node": "^10.0.0",
+    "clue": "github:uncle-tee/clue"
+  },
+  "dependencies": {
+    "cls-hooked": "^4.2.2",
+    "dotenv": "^8.6.0",
+    "uuid": "^3.4.0",
+    "winston": "^3.3.3",
+    "winston-cloudwatch": "^2.5.2"
   }
 }

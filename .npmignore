@@ -5,4 +5,13 @@ jestconfig.json
 .prettierignore
 .eslintignore
 .eslintrc
-.travis.yml
+.travis.yml,
+showcase
+.idea
+__mocks__
+__tests__
+jestconfig.json
+tsconfig.json
+.gitignore
+.prettierignore
+
