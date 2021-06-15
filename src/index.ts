@@ -15,5 +15,5 @@ export const config = {
 export * from "./Service";
 export * from "./Impl";
 export * from "./Data";
-export * from "./logger";
+export * from "./log";
 export * from "./Middleware";

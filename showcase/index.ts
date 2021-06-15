@@ -1,8 +1,7 @@
 import { initRequestTaggingContext } from "../src/RequestRegistrar";
 import express from "express";
 import { errorStackTraceMiddleWare } from "clue";
-import { RequestLogTaggingMiddleware } from "../src";
-import { Logger } from "../src";
+import { Log, RequestLogTaggingMiddleware } from "../src";
 
 initRequestTaggingContext();
 
@@ -11,9 +10,9 @@ const PORT = 8000;
 
 const stackTraceLogger = errorStackTraceMiddleWare(
   (err, request, response, next) => {
-    Logger.critical("There is a critical mittion here", {
+    Log.critical("There is a critical mittion here", {
       tag: ["SALES", "PAYMENT"],
-      stackTrace: err,
+      stackTrace: err
     });
     return response.json("error has failed");
   }
