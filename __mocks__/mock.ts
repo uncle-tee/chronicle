@@ -5,7 +5,7 @@ export const mockHttpServer = (app: Express) => {
     const delay = Number(req.query.delay);
     setTimeout(() => {
       res.status(200).json({
-        status: "ok"
+        status: "ok",
       });
     }, delay);
   });
